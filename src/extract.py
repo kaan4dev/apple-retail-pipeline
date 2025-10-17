@@ -9,7 +9,7 @@ os.chdir(CURRENT_DIR)
 print(f"Working directory is set to: ", CURRENT_DIR)
 
 RAW_DIR = os.path.join(CURRENT_DIR, "data/raw/apple")
-OUT_DIR = os.path.join(OUT_DIR, "data/processed/apple")
+OUT_DIR = os.path.join(CURRENT_DIR, "data/processed/apple")
 os.makedirs(OUT_DIR, exist_ok = True)
 
 files = [f for f in os.listdir(RAW_DIR) if f.endswith(".csv")]  
