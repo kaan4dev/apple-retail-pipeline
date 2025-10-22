@@ -2,7 +2,28 @@
 *.env
 *.env.*
 !.env.example
+
+# Virtual environments
 venv/
+
+# Python cache / build artifacts
 __pycache__/
-.DS_Store
 *.py[cod]
+*.egg-info/
+
+# macOS and notebook noise
+.DS_Store
+.ipynb_checkpoints/
+
+# Airflow runtime output
+airflow/logs/
+airflow/dags/__pycache__/
+airflow/plugins/__pycache__/
+
+# Data artifacts (generated locally)
+data/raw/
+data/raw_parquet/
+data/processed/
+data/analysis/
+data/warehouse/
+image_reports/
