@@ -1,0 +1,42 @@
+
+--- fact_sales ---
+  sale_id  sale_date store_id product_id  quantity  price  revenue claim_id
+  YG-8782 2023-06-16    ST-10       P-38        10    308     3080 CL-58750
+QX-999001 2022-04-13    ST-63       P-48        10    884     8840  CL-8874
+ JG-46890 2021-07-05    ST-26       P-79         5   1242     6210 CL-14486
+Columns: ['sale_id', 'sale_date', 'store_id', 'product_id', 'quantity', 'price', 'revenue', 'claim_id']
+
+--- dim_store ---
+store_id              store_name
+   ST-10 Apple South Coast Plaza
+   ST-63  Apple Parque La Colina
+   ST-26       Apple Leidseplein
+Columns: ['store_id', 'store_name']
+
+--- dim_product ---
+product_id             product_name category_id
+      P-38            iPhone 13 Pro       CAT-4
+      P-48 Apple Watch Nike Edition       CAT-5
+      P-79           Magic Trackpad      CAT-10
+Columns: ['product_id', 'product_name', 'category_id']
+
+--- dim_category ---
+category_id category_name
+      CAT-4    Smartphone
+      CAT-5      Wearable
+     CAT-10   Accessories
+Columns: ['category_id', 'category_name']
+
+--- dim_warranty ---
+claim_id claim_date repair_status
+CL-58750 2024-01-30     Completed
+ CL-8874 2024-06-25       Pending
+CL-14486 2024-08-13       Pending
+Columns: ['claim_id', 'claim_date', 'repair_status']
+
+--- dim_date ---
+      date  year  quarter  month  day day_of_week
+2023-06-16  2023        2      6   16      Friday
+2022-04-13  2022        2      4   13   Wednesday
+2021-07-05  2021        3      7    5      Monday
+Columns: ['date', 'year', 'quarter', 'month', 'day', 'day_of_week']
